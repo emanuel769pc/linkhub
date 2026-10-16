@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #17181a;
+  --color-ink-soft: #55575c;
+  --color-mute: #8b8d93;
+  --color-paper: #f4f4f2;
+  --color-panel: #ffffff;
+  --color-line: #e3e3df;
+  --color-line-strong: #d2d2cd;
+  --color-brand: #2f3ae0;
+  --color-brand-deep: #232bb8;
+  --color-brand-soft: #edefff;
+  --color-ok: #0e9f6e;
+  --color-danger: #dc2626;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Botones de la página pública: microinteracción al pasar el cursor */
+.lh-btn {
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    filter 0.16s ease,
+    background 0.16s ease;
+}
+.lh-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.lh-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lh-btn,
+  .lh-btn:hover,
+  .lh-btn:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Barras de desplazamiento finas para los paneles del editor */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Muestra pequeña de plantillas en la galería */
+.tpl-card:hover .tpl-preview {
+  transform: scale(1.02);
+}
+.tpl-preview {
+  transition: transform 0.25s ease;
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 8px;
+}
