@@ -5,3 +5,4 @@ dist
 *.local
 .vite
 .opencode
+.playwright-mcp
