@@ -13,9 +13,9 @@ export function backgroundStyle(theme: Theme): CSSProperties {
 }
 
 const SIZES = {
-  sm: { padding: '9px 16px', fontSize: 14, icon: 17, gap: 8 },
-  md: { padding: '13px 20px', fontSize: 15, icon: 19, gap: 10 },
-  lg: { padding: '16px 24px', fontSize: 16, icon: 21, gap: 11 },
+  sm: { padY: 9, padX: 16, fontSize: 14, icon: 17, gap: 8 },
+  md: { padY: 13, padX: 20, fontSize: 15, icon: 19, gap: 10 },
+  lg: { padY: 16, padX: 24, fontSize: 16, icon: 21, gap: 11 },
 } as const
 
 export function buttonStyle(theme: Theme, hovered = false): CSSProperties {
@@ -24,7 +24,10 @@ export function buttonStyle(theme: Theme, hovered = false): CSSProperties {
 
   const style: CSSProperties = {
     borderRadius: b.radius >= 900 ? '999px' : `${b.radius}px`,
-    padding: s.padding,
+    paddingTop: s.padY,
+    paddingBottom: s.padY,
+    paddingLeft: s.padX,
+    paddingRight: s.padX,
     fontSize: s.fontSize,
     fontWeight: b.bold ? 700 : 500,
     textTransform: b.uppercase ? 'uppercase' : 'none',
@@ -97,11 +100,14 @@ export function buttonStyle(theme: Theme, hovered = false): CSSProperties {
 
 export function avatarStyle(theme: Theme): CSSProperties {
   const a = theme.avatar
+  const ring = a.ring ? `0 0 0 3px ${a.ringColor}` : null
+  // Sombra suave para que la foto "flote" sobre el fondo en todas las plantillas
+  const depth = '0 18px 36px -18px rgba(0,0,0,0.45), 0 6px 14px -8px rgba(0,0,0,0.2)'
   return {
     width: a.size,
     height: a.size,
     borderRadius: a.shape === 'circle' ? '50%' : a.shape === 'squircle' ? '30%' : '4px',
-    boxShadow: a.ring ? `0 0 0 3px ${a.ringColor}` : undefined,
+    boxShadow: ring ? `${ring}, ${depth}` : depth,
     objectFit: 'cover',
     flexShrink: 0,
   }

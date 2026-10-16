@@ -23,7 +23,7 @@ export function requireSupabase(): SupabaseClient {
 // URL pública de una foto de perfil guardada en el bucket "avatars"
 export function avatarUrl(path: string | null | undefined): string | null {
   if (!path) return null
-  if (path.startsWith('http')) return path
+  if (path.startsWith('http') || path.startsWith('/')) return path
   if (!supabase) return null
   return supabase.storage.from('avatars').getPublicUrl(path).data.publicUrl
 }

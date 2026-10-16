@@ -6,6 +6,8 @@ import { DashboardPage } from './components/admin/DashboardPage'
 import { NewPagePage } from './components/admin/NewPagePage'
 import { EditorPage } from './components/admin/EditorPage'
 import { PublicPage } from './components/PublicPage'
+import { GalleryPage } from './components/templates/GalleryPage'
+import { TemplatePreviewPage } from './components/templates/TemplatePreviewPage'
 import { useAuth } from './hooks/useAuth'
 import type { ReactNode } from 'react'
 import { supabase } from './lib/supabase'
@@ -55,6 +57,8 @@ export default function App() {
               </RequireAuth>
             }
           />
+          <Route path="/galeria" element={<GalleryPage />} />
+          <Route path="/preview/:templateId" element={<TemplatePreviewPage />} />
           <Route path="/p/:slug" element={<PublicPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

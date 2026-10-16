@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import type { usePageEditor } from '../../../hooks/usePageEditor'
 import { TEMPLATES } from '../../../lib/templates'
 import { MiniPreview } from './MiniPreview'
@@ -13,7 +14,7 @@ export function TemplatesSection({ editor }: { editor: Editor }) {
   return (
     <div>
       <SectionTitle hint="Elegir una plantilla aplica sus colores, fuentes y estilo de botones. Luego puedes ajustar todo en Diseño.">
-        24 plantillas
+        {TEMPLATES.length} plantillas
       </SectionTitle>
 
       <div className="grid grid-cols-2 gap-3">
@@ -46,6 +47,13 @@ export function TemplatesSection({ editor }: { editor: Editor }) {
           )
         })}
       </div>
+
+      <Link
+        to="/galeria"
+        className="mt-4 flex items-center justify-center gap-1.5 rounded-xl border border-line bg-white py-2.5 text-[13px] font-semibold text-ink-soft transition hover:border-line-strong hover:text-ink"
+      >
+        Ver galería completa →
+      </Link>
     </div>
   )
 }

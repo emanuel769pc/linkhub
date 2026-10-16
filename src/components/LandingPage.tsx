@@ -39,7 +39,7 @@ export function LandingPage() {
           </h1>
           <p className="mt-5 max-w-xl text-lg text-ink-soft">
             Crea la página de tu cliente en minutos: sube su foto, agrega sus botones y elige
-            entre 24 plantillas. Publícala con un enlace propio y edítala cuando quieras.
+            entre 25 plantillas. Publícala con un enlace propio y edítala cuando quieras.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
@@ -59,7 +59,7 @@ export function LandingPage() {
           </div>
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6 text-sm">
             <div>
-              <dt className="font-display font-bold text-ink">24</dt>
+              <dt className="font-display font-bold text-ink">25</dt>
               <dd className="text-mute">plantillas listas</dd>
             </div>
             <div>

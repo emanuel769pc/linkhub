@@ -90,7 +90,7 @@ export const TEMPLATES: Template[] = [
     textColor: '#F4F4F5',
     mutedColor: '#9CA3AF',
     button: {
-      variant: 'glass', radius: 14, bg: '#FFFFFF14', text: '#F4F4F5', border: '#FFFFFF2E',
+      variant: 'glass', radius: 14, bg: '#FFFFFF17', text: '#F4F4F5', border: '#FFFFFF3D',
       borderWidth: 1, shadow: 'none',
     },
     avatar: { shape: 'circle', size: 96, ring: true, ringColor: '#FFFFFF26' },
@@ -157,7 +157,7 @@ export const TEMPLATES: Template[] = [
     fontBody: 'work',
     textColor: '#4C0519',
     mutedColor: '#9F5568',
-    button: { variant: 'fill', radius: 999, bg: '#E11D48', text: '#FFFFFF', border: '#E11D48', shadow: 'soft' },
+    button: { variant: 'fill', radius: 999, bg: '#BE123C', text: '#FFFFFF', border: '#BE123C', shadow: 'soft' },
     avatar: { shape: 'circle', size: 96, ring: true, ringColor: '#FFFFFF' },
   }),
 
@@ -196,7 +196,7 @@ export const TEMPLATES: Template[] = [
     textColor: '#3D3A33',
     mutedColor: '#8B836F',
     button: {
-      variant: 'fill', radius: 4, bg: '#3D3A33', text: '#F2EEE4', border: '#3D3A33', shadow: 'hard',
+      variant: 'fill', radius: 4, bg: '#3D3A33', text: '#F2EEE4', border: '#3D3A33', shadow: 'soft',
     },
     avatar: { shape: 'square', size: 88, ring: true, ringColor: '#FFFFFF' },
     spacing: 10,
@@ -316,8 +316,8 @@ export const TEMPLATES: Template[] = [
     fontDisplay: 'fraunces',
     fontBody: 'work',
     textColor: '#78350F',
-    mutedColor: '#B45309',
-    button: { variant: 'fill', radius: 999, bg: '#D97706', text: '#FFFBEB', border: '#D97706', shadow: 'soft' },
+    mutedColor: '#92400E',
+    button: { variant: 'fill', radius: 999, bg: '#B45309', text: '#FFFBEB', border: '#B45309', shadow: 'soft' },
     avatar: { shape: 'circle', size: 96, ring: true, ringColor: '#FDE68A' },
   }),
 
@@ -372,7 +372,7 @@ export const TEMPLATES: Template[] = [
     textColor: '#FAFAFA',
     mutedColor: '#A1A1AA',
     button: {
-      variant: 'fill', radius: 8, bg: '#FACC15', text: '#18181B', border: '#18181B',
+      variant: 'fill', radius: 8, bg: '#FACC15', text: '#18181B', border: '#7C3AED',
       borderWidth: 2, shadow: 'hard',
     },
     avatar: { shape: 'squircle', size: 92, ring: true, ringColor: '#FACC15' },

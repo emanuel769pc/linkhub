@@ -45,8 +45,11 @@ export function LinkPageView({ page, theme, links, preview = false }: Props) {
         }}
       >
         <div
-          className="flex flex-col"
-          style={{ alignItems: align === 'center' ? 'center' : 'flex-start' }}
+          className="lh-rise flex flex-col"
+          style={{
+            alignItems: align === 'center' ? 'center' : 'flex-start',
+            animationDelay: '30ms',
+          }}
         >
           {img ? (
             <img src={img} alt={page.client_name} style={avatarStyle(theme)} />
@@ -114,8 +117,8 @@ export function LinkPageView({ page, theme, links, preview = false }: Props) {
               onClick={preview ? (e) => e.preventDefault() : undefined}
               target={preview ? undefined : '_blank'}
               rel="noopener noreferrer"
-              className="lh-btn"
-              style={buttonStyle(theme)}
+              className="lh-btn lh-rise"
+              style={{ ...buttonStyle(theme), animationDelay: `${110 + Math.min(i, 8) * 55}ms` }}
             >
               {theme.button.iconBefore && <IconView icon={l.icon} size={buttonIconSize(theme)} />}
               <span>{l.label}</span>
