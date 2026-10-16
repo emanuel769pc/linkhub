@@ -69,14 +69,13 @@ export function LinkPageView({ page, theme, links, preview = false }: Props) {
           )}
 
           <h1
-            className="mt-5"
             style={{
               fontFamily: fontFamily(theme.fontDisplay),
               fontSize: 27,
               fontWeight: 600,
               lineHeight: 1.2,
               letterSpacing: '-0.01em',
-              margin: 0,
+              marginTop: 28,
             }}
           >
             {page.client_name}
