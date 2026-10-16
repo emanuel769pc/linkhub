@@ -75,7 +75,7 @@ export function LinkPageView({ page, theme, links, preview = false }: Props) {
               fontWeight: 600,
               lineHeight: 1.2,
               letterSpacing: '-0.01em',
-              marginTop: 28,
+              marginTop: 44,
             }}
           >
             {page.client_name}
